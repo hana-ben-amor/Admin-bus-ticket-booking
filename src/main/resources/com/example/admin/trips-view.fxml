@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="tripContent" prefHeight="564.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admin.TripsController">
+   <children>
+      <Label alignment="BASELINE_LEFT" layoutX="14.0" layoutY="37.0" prefHeight="45.0" prefWidth="253.0" text="Trips" AnchorPane.bottomAnchor="482.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="364.0" AnchorPane.topAnchor="37.0">
+         <font>
+            <Font name="Ebrima Bold" size="27.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tripsTable" layoutX="4.0" layoutY="89.0" prefHeight="460.0" prefWidth="622.0">
+         <columns>
+            <TableColumn fx:id="sourceColumn" prefWidth="114.0" text="Source" />
+            <TableColumn fx:id="destinationColumn" prefWidth="177.0" text="Destination" />
+            <TableColumn fx:id="timingColumn" prefWidth="166.0" text="Timing" />
+            <TableColumn fx:id="priceColumn" prefWidth="164.0" text="Price" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="455.0" layoutY="37.0" prefHeight="39.0" prefWidth="151.0" spacing="20.0">
+         <children>
+            <Button fx:id="addTripButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#AddTripModal" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: transparent;" styleClass="plus">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="deleteTripButton" disable="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteSelectedRow" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: transparent;" styleClass="delete">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/remove.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="viewTripsButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onViewTripsBtn" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: transparent;" styleClass="view">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/eye.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
